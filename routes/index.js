@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
 router.get('/signup', (req, res, next) => {
   res.render('signup');
 });
-router.get('/inicio',isAuthenticated, (req, res, next) => {
+router.get('/secreto',isAuthenticated, (req, res, next) => {
   res.render('inicio');
 });
 router.post('/signup', passport.authenticate('local-signup', {
