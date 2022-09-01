@@ -8,7 +8,9 @@ router.get('/', (req, res, next) => {
 router.get('/signup', (req, res, next) => {
   res.render('signup');
 });
-
+router.get('/inicio',isAuthenticated, (req, res, next) => {
+  res.render('inicio');
+});
 router.post('/signup', passport.authenticate('local-signup', {
   successRedirect: '/profile',
   failureRedirect: '/signup',
@@ -30,9 +32,7 @@ router.get('/profile',isAuthenticated, (req, res, next) => {
   res.render('profile');
 });
 
-router.get('/inicio',isAuthenticated, (req, res, next) => {
-  res.render('inicio');
-});
+
 
 router.get('/logout', (req, res, next) => {
   req.logout();
