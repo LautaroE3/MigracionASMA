@@ -27,11 +27,11 @@ router.post('/signin', passport.authenticate('local-signin', {
 }));
 
 router.get('/profile',isAuthenticated, (req, res, next) => {
-  res.render('inicio');
+  res.render('profile');
 });
 
 router.get('/inicio',isAuthenticated, (req, res, next) => {
-  res.render('inicio');
+  res.render('index');
 });
 
 router.get('/logout', (req, res, next) => {
