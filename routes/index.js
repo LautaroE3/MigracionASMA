@@ -43,7 +43,7 @@ function isAuthenticated(req, res, next) {
   if(req.isAuthenticated()) {
     return next();
   }
-
+  res.send('NO TENES PERMISO CULIAU');
   res.redirect('/')
 }
 
