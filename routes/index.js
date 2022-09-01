@@ -27,7 +27,7 @@ router.post('/signin', passport.authenticate('local-signin', {
 }));
 
 router.get('/profile',isAuthenticated, (req, res, next) => {
-  res.render('profile');
+  res.render('inicio');
 });
 
 router.get('/inicio',isAuthenticated, (req, res, next) => {
