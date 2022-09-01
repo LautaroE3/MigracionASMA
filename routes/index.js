@@ -31,7 +31,7 @@ router.get('/profile',isAuthenticated, (req, res, next) => {
 });
 
 router.get('/inicio',isAuthenticated, (req, res, next) => {
-  res.render('index');
+  res.render('inicio');
 });
 
 router.get('/logout', (req, res, next) => {
